@@ -1,0 +1,88 @@
+section.skills{
+    height: auto;
+    width: 100%;
+    background-color: var(--color-white);
+    border-top-right-radius: 150px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.skill_container {
+    width: 100%;
+    padding: 100px 0;
+}
+
+.skillset{
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1%;
+}
+
+.skillset .skillblock{
+    position: relative;
+    margin-top: 4%;
+    height: 250px;
+    width: 400px;
+    background-color: #fff;
+    overflow: hidden;
+
+    border-top-left-radius: 55px;
+    border-bottom-right-radius: 55px;
+    color: var(--color-nuetral);
+    transition: all 600ms cubic-bezier(.73,.11,.1,.98);
+}
+
+.skillset .skillblock.admnspt.active,
+.skillset .skillblock.admnspt:hover {
+    height: 900px;
+}
+.skillset .skillblock.creative_serve.active,
+.skillset .skillblock.creative_serve:hover {
+    height: 900px;
+}
+.skillset .skillblock.cus_care.active,
+.skillset .skillblock.cus_care:hover {
+    height: 650px;
+}
+.skillset .skillblock.lead_nurt.active,
+.skillset .skillblock.lead_nurt:hover {
+    height: 700px;
+}
+.skillset .skillblock.markt_n_advert.active,
+.skillset .skillblock.markt_n_advert:hover {
+    height: 600px;
+}
+
+.skillset .skillblock .skillhead{
+    height: 250px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5%
+}
+
+.skillset .skillblock .skillhead img{
+    height: 40%;
+}
+
+.skillset .skillblock .skillhead h1{
+    color: var(--color-nuetral);
+    font-size: 30px;
+}
+
+
+.skillset .skillblock .skill_list{
+    position: absolute;
+    width: 100%;
+}
+
+.skillset .skillblock .skill_list ul{
+    padding-left: 1em;
+}

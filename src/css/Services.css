@@ -1,0 +1,95 @@
+section.services{
+    height: auto;
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 9%;
+    padding-bottom: 9%;
+}
+
+.blocks{
+    margin-top: 5%;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2%;
+}
+
+.blocks .block{
+    width: 31%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-color: var(--color-white);
+    border-top-left-radius: 50px;
+    overflow: hidden;
+    padding: 4% 0;
+    transition: all 200ms ease;
+}
+
+.blocks .block:hover{
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+/* body:has(.full_time:hover) .blocks .part_time,
+body:has(.full_time:hover) .blocks .proj_base,
+body:has(.part_time:hover) .blocks .full_time,
+body:has(.part_time:hover) .blocks .proj_base,
+body:has(.proj_base:hover) .blocks .part_time,
+body:has(.proj_base:hover) .blocks .full_time{
+    transform: scale(0.92) translateY(10%);
+    filter: grayscale(50%);
+} */
+
+.blocks .block img{
+    height: 20%;
+    object-fit: contain;
+}
+
+.blocks .block h1{
+    color: var(--color-nuetral);
+    font-size: 30px;
+}
+
+.blocks .block h1.more{
+    font-size: 20px;
+}
+
+.blocks .block ul{
+    width: 90%;
+    margin-left: 4em;
+}
+
+@media only screen and (max-width : 1200px) {
+    .blocks{
+        margin-top: 5%;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+   .blocks .block{
+        width: 100%;
+        height: 600px;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        background-color: var(--color-white);
+        border-top-left-radius: 50px;
+        overflow: hidden;
+        padding: 7%;
+        transition: all 200ms ease;
+    }
+}

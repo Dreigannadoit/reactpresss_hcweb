@@ -1,0 +1,252 @@
+.lead{
+    width: 100%;
+    height: auto;
+}
+
+.lead .container{
+    width: 100%;
+    padding: 10% 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.lead .container .block{ 
+    width: 100%;
+    margin-top: 5%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 5%;
+}
+
+.lead .container .block:nth-child(3),
+.lead .container .block:nth-child(5){
+    flex-direction: row-reverse;
+
+}
+
+.lead .container .block img{
+    width: 30%;
+}
+
+.lead .container .block .content{
+    width: 65%;
+}
+
+.lead .container .block .content h1{
+    color: var(--color-nuetral);
+    font-size: 2.5vw;
+}
+
+.lead .container .block .content h2{
+    color: var(--color-dark);
+    font-size: 1.5vw;
+    opacity: 0.6;
+}
+
+.lead .container .block button{
+    border: none;
+}
+
+
+
+body:has(.testi_full.active){
+    overflow: hidden;
+}
+
+.testi_full{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    max-height: 100%;
+    width: 100%;
+    background: #fff;
+    z-index: 9999999;
+    overflow: hidden;
+    transition: all 700ms 0ms cubic-bezier(.73,.11,.1,.98);
+}
+
+.testi_full.active{
+    right: 0%;
+    overflow-y: auto;
+    transition: all 700ms 500ms cubic-bezier(.73,.11,.1,.98);
+}
+
+.testi_full::before{
+    content: "";
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    width: 100%;
+    background: var(--color-light);
+    z-index: -1;
+    transition: 
+        right 700ms 500ms cubic-bezier(.73,.11,.1,.98),
+        background 700ms 0ms cubic-bezier(.73,.11,.1,.98)
+    ;
+}
+
+.testi_full.active::before{
+    background: #ffff;
+    right: 0;
+    transition: 
+        right 700ms 0ms cubic-bezier(.73,.11,.1,.98),
+        background 700ms 500ms cubic-bezier(.73,.11,.1,.98)
+    ;
+}
+
+.testi_full .container{
+    height: 100%;
+    width: 100%;
+    
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+    padding: 10% 0; 
+}
+
+.testi_full .container button{
+    position: fixed;
+    top: 10%;
+    right: -30%;
+    transition: all 700ms 100ms cubic-bezier(.73,.11,.1,.98);
+}
+
+.testi_full.active .container button{
+    right: 7%;
+    transition: all 700ms 600ms cubic-bezier(.73,.11,.1,.98);
+}
+
+.testi_full .container .block{ 
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 5%;
+}
+
+.testi_full .container .block:nth-child(2),
+.testi_full .container .block:nth-child(4){
+    flex-direction: row-reverse;
+}
+
+.testi_full .container .block hr{
+    width: 100%;
+}
+
+.testi_full .container .block img{
+    width: 40%;
+    background: #fff;
+}
+
+.testi_full .container .block .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    opacity: 0;
+    width: 65%;
+    transition: all 700ms 100ms cubic-bezier(.73,.11,.1,.98);
+}
+
+.testi_full.active .container .block .content{
+    opacity: 1;
+    transition: all 700ms 900ms cubic-bezier(.73,.11,.1,.98);
+}
+
+.testi_full .container .block .content h1{
+    color: var(--color-nuetral);
+    font-size: 2.5vw;
+}
+
+.testi_full .container .block .content h2{
+    color: var(--color-dark);
+    font-size: 1.5vw;
+    opacity: 0.6;
+}
+
+.testi_full .container .block .content p{
+    font-size: 1.05vw;
+}
+
+.testi_full .container .block .content h1,
+.testi_full .container .block .content h2,
+.testi_full .container .block .content p{
+    transform: translateY(-50%);
+    transition: all 700ms 100ms cubic-bezier(.73,.11,.1,.98);
+}
+
+.testi_full.active .container .block .content h1,
+.testi_full.active .container .block .content h2,
+.testi_full.active .container .block .content p{
+    transform: translateY(0%);
+    transition: all 700ms 800ms cubic-bezier(.73,.11,.1,.98);
+}
+
+.testi_full .container .block button{
+    border: none;
+}
+
+
+
+@media only screen 
+   and (min-width : 1200px) {
+    .testi_full .container{
+        gap: 90px;
+    }
+    
+}
+
+@media only screen 
+   and (min-width : 1600px) {
+    .testi_full .container{
+        gap: 190px;
+    }
+
+    .testi_full .container .block .content p{
+        font-size: 0.8vw;
+    }
+}
+
+@media only screen 
+   and (max-width : 900px) {
+    .lead .container{
+        width: 100%;
+        padding: 10% 0;
+    
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .lead .container .block{ 
+        flex-direction: column;
+        gap: 35px;
+        text-align: center;
+    }
+    
+    .lead .container .block:nth-child(3),
+    .lead .container .block:nth-child(5){
+        flex-direction: column;
+    }
+
+    .lead .container .block img{
+        width: 60%;
+    }
+    
+    .lead .container .block .content h1{
+        font-size: 5.5vw;
+    }
+    
+    .lead .container .block .content h2{
+        font-size: 3.5vw;
+    }
+    
+}
